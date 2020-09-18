@@ -10,16 +10,17 @@ export default class Pig extends React.Component {
   }
 
   checkPanic = () => {
-    if (this.props.environment === 'inhospitable')
-    {setInterval(this.props.relax())
-    this.panic()}
+    if (this.props.environment === 'inhospitable'){
+      setInterval(this.props.relax,2000)
+      return this.panic()
+    }
   }
 
   render() {
     return(
       <div id={this.props.name} className="sheeple">
         {this.checkPanic()}
-        {/* {this.props.relax()} */}
+       
       </div>
     )
   }

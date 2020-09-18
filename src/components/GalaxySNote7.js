@@ -24,7 +24,7 @@ export default class GalaxySNote7 extends React.Component {
       panicked: true
     })
     this.props.alterEnvironment('inhospitable')
-    setTimeout(() => {this.relax() }, 2000)
+    setInterval(this.relax,2000)
   }
 
   relax = () => {
